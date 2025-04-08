@@ -95,6 +95,7 @@ class EndpointKeyboard(Node):
                 
 
     def send_joint_angles_desired(self):
+        # The appended Zero is to set the gripper angle to open (angle 0). This can be modified if desired!
         self.joint_angles_desired_msg.position = np.append(self.ang_all,0.)
         self.joint_angles_desired_msg.header.stamp = self.get_clock().now().to_msg()
         self.pub_joint_angles_desired.publish(self.joint_angles_desired_msg)

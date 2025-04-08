@@ -18,7 +18,13 @@ def generate_launch_description():
             executable='command_xarm',
             name='command_xarm',
             parameters=[params_file]
-        )
+        ),
+        Node(
+            package='xarmrob',
+            executable='xarm_kinematics',
+            name='xarm_kinematics',
+            parameters=[params_file]
+        )        
     ## NOTE this file is set up to only run the "command_arm" code.
     ## THE USER must also run "cmd_manual" or some other command node to interface with it.
     ])

@@ -266,12 +266,14 @@ class CommandXArm(Node):
 
     # Function to read the values of all Hiwonder Bus Servos with individual commands
     def read_bus_servos(self):
-        try:
-            self.servo_pos = [self.arm.getPosition(s) for s in self.servos]
-            # return servo_pos
-        except:
-            # traceback.print_exc()
-            self.get_logger().error('Bad servo read.')
+        return 0
+        ## Redevelop this again sometime. It does not work reliably 2025-04-08. 
+        # try:
+            # self.servo_pos = [self.arm.getPosition(s) for s in self.servos]
+            # # return servo_pos
+        # except:
+            # # traceback.print_exc()
+            # self.get_logger().error('Bad servo read.')
 
 
 

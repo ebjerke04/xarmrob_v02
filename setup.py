@@ -35,7 +35,8 @@ setup(
         'angle_keyboard=xarmrob.angle_keyboard:main',
         'endpoint_sliders=xarmrob.endpoint_sliders:main',
         'endpoint_keyboard=xarmrob.endpoint_keyboard:main',
-        'xarm_kinematics=xarmrob.xarm_kinematics:main'
+        'xarm_kinematics=xarmrob.xarm_kinematics:main',
+        'endpoint_keyboard_smooth=xarmrob.endpoint_keyboard_smooth:main'
         ],
     },
 )
